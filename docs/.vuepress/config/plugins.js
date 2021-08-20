@@ -9,7 +9,15 @@ const plugins = [
       // moment.locale(lang)
       return moment(timestamp).fromNow('LLLL')
     }
-  }]
+  }],
+  // 支持PWA配置
+  [
+    '@vuepress/pwa',
+    {
+      serviceWorker: true,
+      updatePopup: true,
+    },
+  ],
 ]
 
 module.exports = plugins
